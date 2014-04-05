@@ -2,8 +2,13 @@
 
 A chrome store app using rainyday.js to make an awesome new tab page!
 
+## Where can I download it?
+Either download the source, `bower install` and serve it yourself, or click here:
+
+[Download from the Chrome Store](https://chrome.google.com/webstore/detail/rainy-night/pogcoeenpkpdchlmloiehcbabfkfjncf)
+
 ## Where are the images pulled from?
-http://imgur.com/a/mZtyX#0
+http://imgur.com/a/mZtyX
 
 ### How do I submit an image?
 Please create an issue! Thanks for your help.
