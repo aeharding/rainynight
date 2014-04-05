@@ -3,7 +3,7 @@
 
   "name": "Rainy night",
   "description": "This extension provides a nice 'rain' effect on your splash page.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
