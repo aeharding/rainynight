@@ -1,4 +1,29 @@
-function controller($scope, $http) {
+window.setTimeout(function() {
+    var canvas = document.querySelector('canvas'),
+            context = canvas.getContext('2d');
+
+    // resize the canvas to fill browser window dynamically
+    window.addEventListener('resize', resizeCanvas, false);
+
+    function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+}, 2000);
+
+function controller($scope, $http, $interval) {
+  var image = document.getElementById('background');
+  image.onload = function() {
+    var engine = new RainyDay({
+        image: this
+    });
+  engine.rain([ [1, 2, 8000] ]);
+  engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+  };
+  image.crossOrigin = 'anonymous';
+
+
   $http({
     method: 'GET',
     url: 'https://api.imgur.com/3/album/mZtyX',
@@ -16,22 +41,17 @@ function controller($scope, $http) {
       $scope.link = imageMeta.description.split('|')[1];
     } catch(e) {
       $scope.author = 'anonymous';
-      $scope.link = '';
     }
 
-    var image = document.getElementById('background');
-    image.onload = function() {
-      var engine = new RainyDay({
-          image: this
-      });
-    engine.rain([ [1, 2, 8000] ]);
-    engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
-    };
-    image.crossOrigin = 'anonymous';
     image.src = imageMeta.link;
+  }).error(function() {
+    $scope.author = 'Alexander Harding';
+    image.src = 'images/offline.jpg'
   });
-  $scope.author = 'Alexander Harding';  
-  $scope.time = new Date();
+
+  $interval(function() {
+    $scope.time = new Date();
+  }, 1000);
 }
 
 
