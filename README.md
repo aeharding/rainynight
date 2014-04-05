@@ -3,7 +3,7 @@
 A chrome store app using rainyday.js to make an awesome new tab page!
 
 ## Where can I download it?
-Either download the source, `bower install` and serve it yourself, or click here:
+Either download the source, `bower install` and serve it yourself, or:
 
 [Download from the Chrome Store](https://chrome.google.com/webstore/detail/rainy-night/pogcoeenpkpdchlmloiehcbabfkfjncf)
 
