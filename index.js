@@ -10,7 +10,7 @@ window.setTimeout(function() {
             canvas.height = window.innerHeight;
     }
     resizeCanvas();
-}, 2000);
+}, 500);
 
 function controller($scope, $http, $interval) {
   var image = document.getElementById('background');
