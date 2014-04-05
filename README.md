@@ -15,7 +15,7 @@ Please create an issue! Thanks for your help.
 
 ## What's planned for the future?
 A couple things:
- 1. Configuration -- use your own imgur album.
+ 1. Caching (beyond basic caching of images done now) -- to be nice to imgur's servers and make image load faster when opening a new page.
  2. Forecast & local weather
 
 ## Your code sucks.
