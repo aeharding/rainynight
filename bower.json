@@ -1,0 +1,13 @@
+{
+  "name": "rainynight",
+  "version": "0.0.0",
+  "main": "",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "rainyday.js": "git://github.com/maroslaw/rainyday.js.git#~0.1.2",
+    "angular": "~1.2.16"
+  }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app ng-controller="controller" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rainynight</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/rainyday.js/rainyday.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <img id="background" alt="background" src="" />
+        <footer>
+            <h1 class="author"><a ng-href="{{ link }}">Picture by {{ author }}</a></h1>
+            <h1 class="time">{{time | date:'h:mm a '}}</h1>
+        </footer>
+    </body>
+</html>
