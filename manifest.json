@@ -3,11 +3,12 @@
 
   "name": "Rainy night",
   "description": "This extension provides a nice 'rain' effect on your splash page.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "offline_enabled": true,
+  "options_page": "options.html",
   "web_accessible_resources": [
     "images/*",
     "bower_components/rainyday.js/rainyday.js",

@@ -23,10 +23,10 @@ function controller($scope, $http, $interval) {
   };
   image.crossOrigin = 'anonymous';
 
-
+  var album = localStorage['album'] || 'mZtyX';
   $http({
     method: 'GET',
-    url: 'https://api.imgur.com/3/album/mZtyX',
+    url: 'https://api.imgur.com/3/album/' + album,
     headers: {
       'Authorization': 'Client-ID 033d169c409e243'
     }
@@ -46,7 +46,7 @@ function controller($scope, $http, $interval) {
     image.src = imageMeta.link;
   }).error(function() {
     $scope.author = 'Alexander Harding';
-    image.src = 'images/offline.jpg'
+    image.src = 'images/offline.png'
   });
 
   $interval(function() {
@@ -57,6 +57,6 @@ function controller($scope, $http, $interval) {
 
 
 
-consoleStyles = 'color: darkblue; font-style: italic;';
 // Just for fun. :-)
+consoleStyles = 'color: darkblue; font-style: italic;';
 console.log("%crain\nrain, rain, rain heal my heart that is broken apart\nrain, rain, rain up above from the skies\nrain, rain, rain pour here and clean my soul", consoleStyles);

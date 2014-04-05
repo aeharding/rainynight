@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app ng-controller="controller" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rainy night - options</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="options.js"></script>
+    </head>
+    <body>
+        <h1>Rainy day options</h1>
+        <form name="options">
+        <label>Imgur album: <input type="textbox" ng-model="album" /></label>
+        <br />
+        <input type="submit" ng-click="submit()" value="Submit settings" />
+        <input type="button" ng-click="reset()" value="Reset to defaults" />
+        </form>
+    </body>
+</html>
