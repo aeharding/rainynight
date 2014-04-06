@@ -5,10 +5,29 @@ http://www.color-hex.com/color-palette/382
 */
 
 @font-face {
-  font-family: 'Reenie Beanie';
-  src: url(fonts/ReenieBeanie.ttf);
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(fonts/OpenSans-Light.ttf) format('truetype');
 }
-
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(fonts/OpenSans.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(fonts/OpenSansLight-Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(fonts/OpenSans-Italic.ttf) format('truetype');
+}
 
 body {
   overflow: hidden;
@@ -16,6 +35,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
+  background-image: url(images/bg.png);
+  background-repeat: repeat;
 }
 
 img {
@@ -25,12 +46,14 @@ img {
 }
 
 h1 {
-  font-family: Arial;
+  font-weight: 300;
+  font-family: 'Open Sans';
   z-index: 101;
   white-space: nowrap;
 }
 
 h1.time {
+  font-size: 3em;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -38,7 +61,6 @@ h1.time {
   opacity: .5;
   color: white;
   margin: 10px;
-  font-size: 2em;
   text-shadow: 0 0 1em black;
   text-transform: lowercase;
   letter-spacing: .1em;
@@ -62,6 +84,10 @@ h1.author a {
 }
 h1.author a:hover {
   text-decoration: underline;
+}
+
+.title {
+  /*font-style: italic;*/
 }
 
 

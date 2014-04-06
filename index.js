@@ -13,6 +13,11 @@ window.setTimeout(function() {
 }, 500);
 
 function controller($scope, $http, $interval) {
+  $interval(function() {
+    $scope.time = new Date();
+  }, 1000);
+
+
   var image = document.getElementById('background');
   image.onload = function() {
     var engine = new RainyDay({
@@ -22,6 +27,7 @@ function controller($scope, $http, $interval) {
   engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
   };
   image.crossOrigin = 'anonymous';
+
 
   var album = localStorage['album'] || 'mZtyX';
   $http({
@@ -48,10 +54,6 @@ function controller($scope, $http, $interval) {
     $scope.author = 'Alexander Harding';
     image.src = 'images/offline.png'
   });
-
-  $interval(function() {
-    $scope.time = new Date();
-  }, 1000);
 }
 
 
