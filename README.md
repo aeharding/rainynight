@@ -1,4 +1,5 @@
-# Rainy Night
+# Rainy night
+![Rainy night icon](https://raw.githubusercontent.com/aeharding/rainynight/master/icon128.png)
 
 A chrome store app using rainyday.js to make an awesome new tab page!
 
