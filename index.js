@@ -23,7 +23,7 @@ function controller($scope, $http, $interval) {
     var engine = new RainyDay({
         image: this
     });
-  engine.rain([ [1, 2, 8000] ]);
+  engine.rain([ [1, 2, 1000] ]);
   engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
   };
   image.crossOrigin = 'anonymous';
@@ -49,7 +49,9 @@ function controller($scope, $http, $interval) {
       $scope.author = 'anonymous';
     }
 
-    image.src = imageMeta.link;
+    // HTTPS Everywhere breaks this otherwise... Let's just get https version.
+    var httpsImg = imageMeta.link.replace(/^http:\/\//i, 'https://');
+    image.src = httpsImg;
   }).error(function() {
     $scope.author = 'Alexander Harding';
     image.src = 'images/offline.png'

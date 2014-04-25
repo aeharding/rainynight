@@ -5,12 +5,11 @@
     "128": "icon128.png"
   },
   "description": "This extension provides a nice 'rain' effect on your splash page.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "offline_enabled": true,
-  "options_page": "options.html",
   "web_accessible_resources": [
     "images/*",
     "bower_components/rainyday.js/rainyday.js",
