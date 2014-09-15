@@ -4,8 +4,9 @@
   "icons": {
     "128": "icon128.png"
   },
+  "options_page": "options.html",
   "description": "This extension provides a nice 'rain' effect on your splash page.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
